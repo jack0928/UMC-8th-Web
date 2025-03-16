@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs Inline vs Inline-Block</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Block, Inline, Inline-Block 실습</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2> Block 요소</h2>
+            <p class="block">이것은 문단(p) 태그입니다.</p>
+            <h3 class="block">이것은 제목(h3) 태그입니다.</h3>
+            <article class="block">이것은 콘텐츠(article) 태그입니다.</article>
+        </section>
+
+        <section>
+            <h2> Inline 요소</h2>
+            <p>
+                <span class="inline">이것은 인라인(span) 요소입니다.</span>
+                <a href="#" class="inline">이것은 링크(a) 요소입니다.</a>
+                <strong class="inline">이것은 굵은(strong) 요소입니다.</strong>
+            </p>
+        </section>
+
+        <section>
+            <h2> Inline-Block 요소</h2>
+            <button class="small-btn">작은 버튼</button>
+            <button class="large-btn">큰 버튼</button>
+            <input class="small-input" type="text" placeholder="작은 입력창">
+            <input class="large-input" type="text" placeholder="큰 입력창">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 여기는 footer입니다.</p>
+    </footer>
+</body>
+</html>
