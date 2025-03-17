@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Transform Example</title>
+    <title>CSS 공 튀기기</title>
     <style>
-        .box {
+        .circle {
             width: 100px;
             height: 100px;
             background-color: lightblue;
+            border-radius: 100%;
             text-align: center;
             line-height: 100px;
             font-weight: bold;
-            transform: translate(100px, 100px) rotate(45deg);
-            transition: transform 0.5s ease-in-out;
+            transform: translate(300px, 750px);
+            animation: bounce 2s ease-in-out infinite alternate
         }
 
-        .box:hover {
-            transform: translate(500px, 500px) scale(2) rotate(20000deg);
-            background-color: lightpink;
+        @keyframes bounce {
+            0% { transform: translate(300px, 750px) scale(1.1, 0.9);
+            }
+            50% { transform: translate(300px, 100px) ; 
+            }
+            100% { transform: translate(300px, 750px) scale(1.1, 0.9);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="box">야호!</div>
+    <div class="circle">공</div>
 </body>
 </html>
