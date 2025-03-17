@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: purple;
-      color: white;
-      box-sizing: border-box;
-      position: relative;
-      top: 50px;
-      left: 50px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 정렬 실습</title>
+    <style>
+        /* 기본 스타일 - 아무 정렬도 적용하지 않음 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .goguma-sangja {
-      position: relative;
-      bottom: 100px;
-      right: -50px;
-    }
-  </style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            display: block; /* 플렉스, 그리드 X */
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            font-size: 18px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="box">BOX</div>
-  <h1 class="goguma-sangja">고구마 상자</h1>
-</body>
+    <h1>CSS 정렬 실습 (기본 상태)</h1>
 
+    <div class="container">
+        <div class="box">text-align</div>
+        <div class="box">margin</div>
+        <div class="box">flex</div>
+        <div class="box">translate</div>
+        <div class="box">grid</div>
+    </div>
+</body>
 </html>
