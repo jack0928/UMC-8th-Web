@@ -3,46 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Example</title>
+    <title>CSS Transform Example</title>
     <style>
-        /* 기본 스타일 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        /* 배경을 적용할 div */
-        .background-box {
-            width: 100vw;
-            height: 100vh; /* 화면 전체 크기 */
-            
-            /* 개별 속성 사용 */
-            background-image: url('background.webp'); /* 배경 이미지 설정 */
-            background-repeat: no-repeat; /* 반복 없음 */
-            background-position: center; /* 중앙 정렬 */
-            background-size: cover; /* 요소를 꽉 채우면서 비율 유지 */
-        }
-
-        /* 텍스트 스타일 */
-        .content {
-            color: white;
-            font-size: 24px;
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
             text-align: center;
-            padding-top: 40vh; /* 텍스트를 아래로 조금 내림 */
+            line-height: 100px;
+            font-weight: bold;
+            transform: translate(100px, 100px) rotate(45deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            transform: translate(500px, 500px) scale(2) rotate(20000deg);
+            background-color: lightpink;
         }
     </style>
 </head>
 <body>
-    <div class="background-box">
-        <div class="content">
-            <h1>배경 이미지 테스트</h1>
-            <p>이 페이지는 개별 background 속성을 사용하여 배경을 적용했습니다. 이건 최근에 재미있게 본 <컴패니언>이라는 영화의 한 장면입니다.</p>
-        </div>
-    </div>
+    <div class="box">야호!</div>
 </body>
 </html>
