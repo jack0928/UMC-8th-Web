@@ -28,17 +28,45 @@
             font-size: 18px;
             border: 1px solid black;
         }
+        .text-align {
+            text-align: justify;
+        }
+        .margin {
+            margin: 30px auto;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border: 2px solid red;
+        }
+        .translate {
+            transform: translate(50px, 50px);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 10fr;
+            gap: 100px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>CSS 정렬 실습 (기본 상태)</h1>
 
     <div class="container">
-        <div class="box">text-align</div>
-        <div class="box">margin</div>
-        <div class="box">flex</div>
-        <div class="box">translate</div>
-        <div class="box">grid</div>
+        <div class="box text-align">text-align</div>
+        <div class="box margin">margin</div>
+        <div class="box flex-container">flex</div>
+        <div class="box translate">translate</div>
     </div>
+    <!-- grid-container를 별도의 부모 요소로 이동 -->
+<div class="grid-container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
 </body>
 </html>
