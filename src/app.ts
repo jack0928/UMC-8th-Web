@@ -36,6 +36,16 @@ const doTodo = (todoId: string): void => {
     renderDoneTodos();
 };
 
+const deleteDoneTodo = (todoId: string): void => {
+    const index = doneTodos.findIndex(todo => todo.id === todoId);
+    if (index === -1) return; // 해당 ID가 없으면 종료
+
+    doneTodos.splice(index, 1); // 
+
+    renderTodos();
+    renderDoneTodos();
+};
+
 const renderTodos = (): void => {
     todoList.innerHTML = "";
 
@@ -73,7 +83,7 @@ const renderDoneTodos = (): void => {
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "삭제";
         deleteButton.classList.add("delete-button");
-        //deleteButton.addEventListener("click", () => deleteDoneTodo(todo.id));
+        deleteButton.addEventListener("click", () => deleteDoneTodo(todo.id));
 
         li.appendChild(taskText);
         li.appendChild(deleteButton);

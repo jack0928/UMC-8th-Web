@@ -26,6 +26,14 @@ const doTodo = (todoId) => {
     renderTodos();
     renderDoneTodos();
 };
+const deleteDoneTodo = (todoId) => {
+    const index = doneTodos.findIndex(todo => todo.id === todoId);
+    if (index === -1)
+        return;
+    doneTodos.splice(index, 1);
+    renderTodos();
+    renderDoneTodos();
+};
 const renderTodos = () => {
     todoList.innerHTML = "";
     todos.forEach(todo => {
@@ -51,6 +59,7 @@ const renderDoneTodos = () => {
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "삭제";
         deleteButton.classList.add("delete-button");
+        deleteButton.addEventListener("click", () => deleteDoneTodo(todo.id));
         li.appendChild(taskText);
         li.appendChild(deleteButton);
         doneList.appendChild(li);
