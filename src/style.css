@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+button {
+    border-radius: 15%;
+}
+button:hover {
+    background-color: gray;
+}
+
+.todo-container{
+    background-color: white;   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center; 
+}
+.process-area{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0px 55px;
+}
+.add-button{
+    background-color: green;
+    color:white;
+}
+
+.complete-button{
+    background-color: green;
+    color:white;
+}
+
+.delete-button{
+    background-color: red;
+    color:white;
+}
