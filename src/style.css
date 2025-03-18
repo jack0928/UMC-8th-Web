@@ -9,12 +9,6 @@ body {
     height: 100vh;
     background-color: whitesmoke;
 }
-button {
-    border-radius: 15%;
-}
-button:hover {
-    background-color: gray;
-}
 
 .todo-container{
     background-color: white;   
@@ -30,17 +24,12 @@ button:hover {
     margin-top: 20px;
     padding: 0px 55px;
 }
-.add-button{
+#add-button {
     background-color: green;
-    color:white;
+    color: white;
+    border-radius: 15%;
 }
 
-.complete-button{
-    background-color: green;
-    color:white;
-}
-
-.delete-button{
-    background-color: red;
-    color:white;
+#add-button:hover {
+    background-color: gray;
 }
