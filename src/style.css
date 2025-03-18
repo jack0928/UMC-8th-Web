@@ -33,3 +33,13 @@ body {
 #add-button:hover {
     background-color: gray;
 }
+
+#complete-button {
+    background-color: blue;
+    color: white;
+    border-radius: 15%;
+}
+
+#complete-button:hover {
+    background-color: gray;
+}
